@@ -16,9 +16,36 @@
 </head>
 <body>
     <header>
-        <h1>Lost in the Wild</h1>
-        <h2>Memory Game</h2>
+        <div id="title" class="container">
+            <h1>Lost in the Wild</h1>
+            <h2>Memory Game</h2>
+        </div>
     </header>
+
+    <!-- Main menu -->
+    <div id="menu" class="container">
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <button id="easy-button" class="difficulty-button">Easy</button>
+            </div>
+            <div class="col-4">
+                <button id="medium-button" class="difficulty-button">Medium</button>
+            </div>
+            <div class="col-4">
+                <button id="hard-button" class="difficulty-button">Hard</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 offset-4">
+                <button id="play-button" class="play-button">Play!</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 offset-4">
+                <button class="rules-button">Rules</button>
+            </div>
+        </div>
+    </div>
     
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
