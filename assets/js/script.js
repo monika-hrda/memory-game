@@ -8,10 +8,25 @@ let numOfCards = 6;
 let cards = [];
 
 let isPaused = false;
+let chosenCards = [];
 
 function checkCards(event) {
-    //console.log(event.currentTarget.dataset.id);
-    console.log(event.currentTarget.dataset.index);
+    if (isPaused) return;
+    const card = event.currentTarget;
+    card.classList.add('flipped');
+
+    if (chosenCards.length === 0) {
+        chosenCards.push(card);
+    } else if (chosenCards.length === 1) {
+            isPaused = true;
+            chosenCards.push(card);
+            // check cards for match
+
+            setTimeout(() => {
+                isPaused = false;
+                chosenCards = [];
+            }, 2500)
+    }
 }
 
 function setCardListeners() {
