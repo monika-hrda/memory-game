@@ -9,17 +9,27 @@ let cards = [];
 
 let isPaused = false;
 let chosenCards = [];
+let numOfMatches = 0;
+
+function gameOver() {
+    console.log('You\'re a Legend!');
+}
 
 function checkCardsForMatch(chosenCards) {
     let isMatch = chosenCards[0].dataset.id === chosenCards[1].dataset.id;
-    console.log(isMatch);
     if (!isMatch) {
-        chosenCards.forEach((card) => card.classList.remove('flipped'));
+        setTimeout(() => {
+            chosenCards.forEach((card) => card.classList.remove('flipped'));
+        }, 1500);
     } else {
+        numOfMatches++;
         chosenCards.forEach((card) => {
             // disable matched cards from being clicked on again
             card.style.pointerEvents = 'none';
         });
+        if (numOfMatches === cards.length/2) {
+            gameOver();
+        }
     }
 }
 
@@ -27,7 +37,6 @@ function checkCards(event) {
     if (isPaused) return;
     const card = event.currentTarget;
     if (chosenCards.length === 1 && card.dataset.index === chosenCards[0].dataset.index) return;
-    console.log('STOP RIGHT THERE');
     card.classList.add('flipped');
 
     if (chosenCards.length === 0) {
@@ -42,7 +51,7 @@ function checkCards(event) {
             setTimeout(() => {
                 isPaused = false;
                 chosenCards = [];
-            }, 2500)
+            }, 1500)
     }
 }
 
@@ -75,7 +84,6 @@ function shuffleCards(cards) {
 
 function startGame() {
     cards = shuffleCards(cards.concat(cards));
-    // console.log(cards);
     displayCards(cards);
 };
 
@@ -91,7 +99,6 @@ difficultyButtons.forEach(function (button) {
         });
         btn.classList.add('button-active');
         numOfCards = Number(btn.dataset.value);
-        //console.log(numOfCards);
     })
 });
 
