@@ -9,3 +9,10 @@
 #game {
     display: none;
 }
+
+.card {
+    width: 20%;
+    height: auto;
+    padding: 2.5%;
+    display: inline-block;
+}

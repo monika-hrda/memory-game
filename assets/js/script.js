@@ -7,18 +7,32 @@ const board = document.querySelector('#board');
 let numOfCards = 6;
 let cards = [];
 
-function createCard(card) {
+function flipCard(event) {
+    //console.log(event.currentTarget.dataset.id);
+    console.log(event.currentTarget.dataset.index);
+}
+
+function setCardListeners() {
+    const playingCards = document.querySelectorAll('.card');
+    playingCards.forEach(function (playingCard) {
+        playingCard.addEventListener('click', flipCard);
+    });
+}
+
+function createCard(card, index) {
     return `
-        <div class="card">
+        <div class="card" data-id="${card.id}" data-index="${index}">
             <img src="${card.image}">
         </div>
     `
 }
 
 function displayCards(cards) {
-    cards.forEach(function (card) {
-        card = createCard(card);
+    cards.forEach(function (card, index) {
+        card = createCard(card, index);
+        board.innerHTML += card;
     });
+    setCardListeners();
 }
 
 function shuffleCards(cards) {
@@ -27,7 +41,7 @@ function shuffleCards(cards) {
 
 function startGame() {
     cards = shuffleCards(cards.concat(cards));
-    console.log(cards);
+    // console.log(cards);
     displayCards(cards);
 };
 
