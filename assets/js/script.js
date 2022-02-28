@@ -7,6 +7,15 @@ const board = document.querySelector('#board');
 let numOfCards = 6;
 let cards = [];
 
+function shuffleCards(cards) {
+    return cards.sort(() => Math.random()-0.5);
+}
+
+function startGame() {
+    cards = shuffleCards(cards);
+    //console.log(cards);
+};
+
 // Event Listeners
 
 difficultyButtons.forEach(function (button) {
@@ -27,6 +36,6 @@ playButton.addEventListener('click', function () {
     cards = animalCards.slice(0, numOfCards);
     menu.style.display = 'none';
     game.style.display = 'block';
+    startGame();
 });
 
-//console.log(board);
