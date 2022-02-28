@@ -13,6 +13,14 @@ let chosenCards = [];
 function checkCardsForMatch(chosenCards) {
     let isMatch = chosenCards[0].dataset.id === chosenCards[1].dataset.id;
     console.log(isMatch);
+    if (!isMatch) {
+        chosenCards.forEach((card) => card.classList.remove('flipped'));
+    } else {
+        chosenCards.forEach((card) => {
+            // disable matched cards from being clicked on again
+            card.style.pointerEvents = 'none';
+        });
+    }
 }
 
 function checkCards(event) {
