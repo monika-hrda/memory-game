@@ -1,0 +1,11 @@
+.button-warning {
+    background-color: yellow;
+}
+
+.button-active {
+    background-color: lightyellow;
+}
+
+#game {
+    display: none;
+}
