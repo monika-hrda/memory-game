@@ -7,13 +7,28 @@ const board = document.querySelector('#board');
 let numOfCards = 6;
 let cards = [];
 
+function createCard(card) {
+    return `
+        <div class="card">
+            <img src="${card.image}">
+        </div>
+    `
+}
+
+function displayCards(cards) {
+    cards.forEach(function (card) {
+        card = createCard(card);
+    });
+}
+
 function shuffleCards(cards) {
     return cards.sort(() => Math.random()-0.5);
 }
 
 function startGame() {
-    cards = shuffleCards(cards);
-    //console.log(cards);
+    cards = shuffleCards(cards.concat(cards));
+    console.log(cards);
+    displayCards(cards);
 };
 
 // Event Listeners
