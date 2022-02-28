@@ -10,9 +10,16 @@ let cards = [];
 let isPaused = false;
 let chosenCards = [];
 
+function checkCardsForMatch(chosenCards) {
+    let isMatch = chosenCards[0].dataset.id === chosenCards[1].dataset.id;
+    console.log(isMatch);
+}
+
 function checkCards(event) {
     if (isPaused) return;
     const card = event.currentTarget;
+    if (chosenCards.length === 1 && card.dataset.index === chosenCards[0].dataset.index) return;
+    console.log('STOP RIGHT THERE');
     card.classList.add('flipped');
 
     if (chosenCards.length === 0) {
@@ -20,7 +27,9 @@ function checkCards(event) {
     } else if (chosenCards.length === 1) {
             isPaused = true;
             chosenCards.push(card);
+            
             // check cards for match
+            checkCardsForMatch(chosenCards);
 
             setTimeout(() => {
                 isPaused = false;
