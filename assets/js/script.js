@@ -7,7 +7,9 @@ const board = document.querySelector('#board');
 let numOfCards = 6;
 let cards = [];
 
-function flipCard(event) {
+let isPaused = false;
+
+function checkCards(event) {
     //console.log(event.currentTarget.dataset.id);
     console.log(event.currentTarget.dataset.index);
 }
@@ -15,7 +17,7 @@ function flipCard(event) {
 function setCardListeners() {
     const playingCards = document.querySelectorAll('.card');
     playingCards.forEach(function (playingCard) {
-        playingCard.addEventListener('click', flipCard);
+        playingCard.addEventListener('click', checkCards);
     });
 }
 
