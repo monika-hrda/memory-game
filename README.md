@@ -57,6 +57,10 @@ As a user, I want to be able to:
 
 ### Frameworks, Libraries & Programs Used
 
+* [https://svgtopng.com/](https://svgtopng.com/) - to convert SVG files to PNG
+* [https://www.iloveimg.com/](https://www.iloveimg.com/) - to resize multiple PNG files at once
+* [https://onlinepngtools.com/](https://onlinepngtools.com/) - to fit PNG files in a rectangle
+
 ***
 ## Testing
 
