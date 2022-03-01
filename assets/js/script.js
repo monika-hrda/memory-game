@@ -36,6 +36,7 @@ function checkCardsForMatch(chosenCards) {
 function checkCards(event) {
     if (isPaused) return;
     const card = event.currentTarget;
+    
     if (chosenCards.length === 1 && card.dataset.index === chosenCards[0].dataset.index) return;
     card.classList.add('flipped');
 
@@ -45,7 +46,6 @@ function checkCards(event) {
             isPaused = true;
             chosenCards.push(card);
             
-            // check cards for match
             checkCardsForMatch(chosenCards);
 
             setTimeout(() => {
@@ -64,17 +64,26 @@ function setCardListeners() {
 
 function createCard(card, index) {
     return `
-        <div class="card" data-id="${card.id}" data-index="${index}">
+        <div class="card col-3" data-id="${card.id}" data-index="${index}">
             <img src="${card.image}">
         </div>
     `
 }
 
 function displayCards(cards) {
-    cards.forEach(function (card, index) {
-        card = createCard(card, index);
-        board.innerHTML += card;
-    });
+    let cardsHTML = '';
+
+    for (let i = 0; i < cards.length; i+=4) {
+        const chunk = cards.slice(i, i+4);
+        
+        chunk.forEach(function(card, index) {
+            cardsHTML += createCard(card, index + i);
+        });
+
+        board.innerHTML += `<div class="row">${cardsHTML}</div>`;
+        cardsHTML = '';
+    };
+
     setCardListeners();
 }
 

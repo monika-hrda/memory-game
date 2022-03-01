@@ -1,3 +1,7 @@
+body {
+    background-color: #e3f6f5;
+}
+
 .button-warning {
     background-color: yellow;
 }
@@ -8,13 +12,6 @@
 
 #game {
     display: none;
-}
-
-.card {
-    width: 20%;
-    height: auto;
-    padding: 2.5%;
-    display: inline-block;
 }
 
 .flipped {
