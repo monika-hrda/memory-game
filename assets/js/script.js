@@ -1,10 +1,12 @@
 const menu = document.querySelector('#menu');
 const difficultyButtons = document.querySelectorAll('.difficulty-button');
 const playButton = document.querySelector('#play-button');
-const quitButton = document.querySelector('#quit-button');
+const quitButtons = document.querySelectorAll('.quit-buttons');
 const game = document.querySelector('#game');
 const board = document.querySelector('#board');
 const movesCounter = document.querySelector('#moves-counter');
+const winMoves = document.querySelector('#win-moves');
+const winTime = document.querySelector('#win-time');
 
 let numOfCards = 6;
 let cards = [];
@@ -15,7 +17,9 @@ let numOfMatches = 0;
 let moves = 0;
 
 function gameOver() {
-    console.log('You\'re a Legend!');
+    winMoves.innerHTML = moves;
+    // show time to win
+    $('#gameWon').modal('show');
 }
 
 function checkCardsForMatch(chosenCards) {
@@ -134,6 +138,8 @@ playButton.addEventListener('click', function () {
     startGame();
 });
 
-quitButton.addEventListener('click', function() {
-    window.location.href = '/';
-})
+quitButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+        window.location.href = '/';
+    });
+});

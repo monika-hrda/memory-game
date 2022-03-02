@@ -69,12 +69,9 @@
                 <div class="col-3">
                     <button class="rules-button btn btn-info">Rules</button>
                 </div>
-                <!-- <div class="col-3">
-                    <button id="quit-button" class="btn btn-primary">Quit</button>
-                </div> -->
                 <!-- Button trigger modal -->
                 <div class="col-3">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#confirmQuitGame">
                         Quit
                     </button>
                 </div>
@@ -82,8 +79,10 @@
         </div>
     </div>
 
-    <!-- Modal, customized from https://getbootstrap.com/docs/4.6/components/modal/#static-backdrop -->
-    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <!-- Modals, customized from https://getbootstrap.com/docs/4.6/components/modal/#static-backdrop -->
+
+    <!-- Modal to confirm quit game -->
+    <div class="modal fade" id="confirmQuitGame" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="confirmQuitGameLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -92,11 +91,33 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p class="text-center bold">Are you sure you want to quit the game?</p>
+                    <p>Are you sure you want to quit the game?</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Take me back to my game!</button>
-                    <button type="button" id="quit-button" class="btn btn-primary">Quit</button>
+                    <button type="button" class="quit-buttons btn btn-primary">Quit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal to announce winning the game -->
+    <div class="modal fade" id="gameWon" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="gameWonLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Congratulations, you won!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>You finished the game in <span id="win-moves"></span> moves 
+                        and it took you <span id="win-time"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="quit-buttons btn btn-primary">Main Menu</button>
                 </div>
             </div>
         </div>
