@@ -27,6 +27,10 @@ As a user, I want to be able to:
 
 * #### Typography
 
+  [Lobster font](https://fonts.google.com/specimen/Lobster) has been used for the main heading as it is more untraditional and conveys playfulness. 
+
+  [Roboto](https://fonts.google.com/specimen/Roboto) has been identified as a perfect pairing to Lobster for its relative simplicity and readability (as per research on [The 30 Best Font Combinations for Web Design​](https://elementor.com/blog/font-pairing/)).
+
 * #### Imagery
 
 ### Wireframes

@@ -74,10 +74,10 @@ function createCard(card, index) {
     return `
         <div class="flip-card col-3" data-index="${index}" data-id="${card.id}">
             <div class="flip-card-inner">
-                <div class="flip-card-back">
+                <div class="flip-card-back rounded-sm">
                     <img class="card-image img-fluid" src="assets/images/cards/card-back.png">
                 </div>
-                <div class="flip-card-front">
+                <div class="flip-card-front rounded-sm">
                     <img class="card-image img-fluid" src="${card.image}">
                 </div>
             </div>
