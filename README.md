@@ -60,9 +60,17 @@ As a user, I want to be able to:
 * [https://svgtopng.com/](https://svgtopng.com/) - to convert SVG files to PNG
 * [https://www.iloveimg.com/](https://www.iloveimg.com/) - to resize multiple PNG files at once
 * [https://onlinepngtools.com/](https://onlinepngtools.com/) - to fit PNG files in a rectangle
+* [https://imagecompressor.com/](https://imagecompressor.com/) - to compress image files
 
 ***
 ## Testing
+
+During the development process, the game was continuously tested and bugs and issues that were found were resolved. A few examples would be:
+
+* Using class 'card' on cards caused issue with displaying them because of Bootstrap using the class for their card component. The class was renamed as soon as I realised that.
+* It took some JavaScript magic to create Bootstrap rows dynamically. 
+* While working on the cards flipping mechanism, there were issues with getting cards to be responsive without getting their images squished, the rows disappering completely, images and cards overlapping, the height not being responsive, etc. A lot of it was solved by discovering the CSS properties 'aspect-ratio' and 'object-fit' (https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio, https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)
+
 
 ***
 ## Deployment
@@ -71,6 +79,8 @@ As a user, I want to be able to:
 ## Credits
 
 ### Code
+
+* Creating a flip card (HTML & CSS) - https://www.w3schools.com/howto/howto_css_flip_card.asp
 
 ### Content
 
