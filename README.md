@@ -67,9 +67,11 @@ As a user, I want to be able to:
 
 During the development process, the game was continuously tested and bugs and issues that were found were resolved. A few examples would be:
 
-* Using class 'card' on cards caused issue with displaying them because of Bootstrap using the class for their card component. The class was renamed as soon as I realised that.
+* Using class 'card' on cards caused issue with displaying them because of Bootstrap using the class for their own card component. The custom class was renamed as soon as I realised that.
 * It took some JavaScript magic to create Bootstrap rows dynamically. 
 * While working on the cards flipping mechanism, there were issues with getting cards to be responsive without getting their images squished, the rows disappering completely, images and cards overlapping, the height not being responsive, etc. A lot of it was solved by discovering the CSS properties 'aspect-ratio' and 'object-fit' (https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio, https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)
+* When using white colour as a background colour for the animal images, there seemed to be a colour contrast issue. Some animals were switched around to accommodate this. See example below, with the last board being one with no contrast issues:
+![examples of contrast issues with cards and subsequent cards choice](docs/screenshots/cards-contrast-issue-examples.jpg)
 
 
 ***
