@@ -3,6 +3,7 @@ const difficultyButtons = document.querySelectorAll('.difficulty-button');
 const playButton = document.querySelector('#play-button');
 const game = document.querySelector('#game');
 const board = document.querySelector('#board');
+const movesCounter = document.querySelector('#moves-counter');
 
 let numOfCards = 6;
 let cards = [];
@@ -10,6 +11,7 @@ let cards = [];
 let isPaused = false;
 let chosenCards = [];
 let numOfMatches = 0;
+let moves = 0;
 
 function gameOver() {
     console.log('You\'re a Legend!');
@@ -49,6 +51,7 @@ function checkCards(event) {
     } else if (chosenCards.length === 1) {
             isPaused = true;
             chosenCards.push(card);
+            movesCounter.innerText = ++moves;
             
             checkCardsForMatch(chosenCards);
 
