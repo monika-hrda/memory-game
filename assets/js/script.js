@@ -1,6 +1,7 @@
 const menu = document.querySelector('#menu');
 const difficultyButtons = document.querySelectorAll('.difficulty-button');
 const playButton = document.querySelector('#play-button');
+const quitButton = document.querySelector('#quit-button');
 const game = document.querySelector('#game');
 const board = document.querySelector('#board');
 const movesCounter = document.querySelector('#moves-counter');
@@ -133,3 +134,6 @@ playButton.addEventListener('click', function () {
     startGame();
 });
 
+quitButton.addEventListener('click', function() {
+    window.location.href = '/';
+})

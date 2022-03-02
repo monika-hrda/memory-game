@@ -61,6 +61,7 @@ As a user, I want to be able to:
 
 ### Frameworks, Libraries & Programs Used
 
+* [Google Fonts](https://fonts.google.com/)
 * [https://svgtopng.com/](https://svgtopng.com/) - to convert SVG files to PNG
 * [https://www.iloveimg.com/](https://www.iloveimg.com/) - to resize multiple PNG files at once
 * [https://onlinepngtools.com/](https://onlinepngtools.com/) - to fit PNG files in a rectangle
@@ -86,7 +87,8 @@ During the development process, the game was continuously tested and bugs and is
 
 ### Code
 
-* Creating a flip card (HTML & CSS) - https://www.w3schools.com/howto/howto_css_flip_card.asp
+* Creating a flip card (HTML & CSS part, customized) - https://www.w3schools.com/howto/howto_css_flip_card.asp
+* Bootstrap modal - https://getbootstrap.com/docs/4.6/components/modal/#static-backdrop
 
 ### Content
 

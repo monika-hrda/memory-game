@@ -64,6 +64,42 @@
         <div id="board" class="container">
             <!-- board will be dynamically built by JavaScript -->
         </div>
+        <div id="game-buttons">
+            <div class="row justify-content-center">
+                <div class="col-3">
+                    <button class="rules-button btn btn-info">Rules</button>
+                </div>
+                <!-- <div class="col-3">
+                    <button id="quit-button" class="btn btn-primary">Quit</button>
+                </div> -->
+                <!-- Button trigger modal -->
+                <div class="col-3">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+                        Quit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal, customized from https://getbootstrap.com/docs/4.6/components/modal/#static-backdrop -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center bold">Are you sure you want to quit the game?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Take me back to my game!</button>
+                    <button type="button" id="quit-button" class="btn btn-primary">Quit</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Bootstrap -->
