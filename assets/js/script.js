@@ -1,6 +1,7 @@
 const menu = document.querySelector('#menu');
 const difficultyButtons = document.querySelectorAll('.difficulty-button');
 const playButton = document.querySelector('#play-button');
+const quitButton = document.querySelector('#quit-button');
 const quitButtons = document.querySelectorAll('.quit-buttons');
 const game = document.querySelector('#game');
 const board = document.querySelector('#board');
@@ -17,8 +18,9 @@ let numOfMatches = 0;
 let moves = 0;
 
 function gameOver() {
-    winMoves.innerHTML = moves;
-    // show time to win
+    winMoves.innerText = moves;
+    // TODO - show time to win
+    quitButton.innerText = 'Main Menu';
     $('#gameWon').modal('show');
 }
 

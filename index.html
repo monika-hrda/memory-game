@@ -53,6 +53,8 @@
 
     <!-- Game Board -->
     <div id="game" class="container">
+
+        <!-- Counters section -->
         <div class="counters row justify-content-center">
             <div class="col-6 col-md-3">
                 <div id="moves">MOVES: <span id="moves-counter">0</span></div>
@@ -61,17 +63,21 @@
                 <div>TIME: <span id="time-counter">0</span></div>
             </div>
         </div>
+
+        <!-- Playing cards -->
         <div id="board" class="container">
             <!-- board will be dynamically built by JavaScript -->
         </div>
+
+        <!-- Buttons section -->
         <div id="game-buttons">
             <div class="row justify-content-center">
                 <div class="col-3">
                     <button class="rules-button btn btn-info">Rules</button>
                 </div>
-                <!-- Button trigger modal -->
+                <!-- Button triggers modal -->
                 <div class="col-3">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#confirmQuitGame">
+                    <button type="button" id="quit-button" class="btn btn-primary" data-toggle="modal" data-target="#confirmQuitGame">
                         Quit
                     </button>
                 </div>
@@ -113,7 +119,7 @@
                 </div>
                 <div class="modal-body">
                     <p>You finished the game in <span id="win-moves"></span> moves 
-                        and it took you <span id="win-time"></span></p>
+                        and it took you <span id="win-time"></span></p>.
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
