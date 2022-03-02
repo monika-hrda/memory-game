@@ -6,6 +6,8 @@ const quitButtons = document.querySelectorAll('.quit-buttons');
 const game = document.querySelector('#game');
 const board = document.querySelector('#board');
 const movesCounter = document.querySelector('#moves-counter');
+const minutes = document.querySelector('#minutes');
+const seconds = document.querySelector('#seconds');
 const winMoves = document.querySelector('#win-moves');
 const winTime = document.querySelector('#win-time');
 
@@ -16,10 +18,14 @@ let isPaused = false;
 let chosenCards = [];
 let numOfMatches = 0;
 let moves = 0;
+let mins = 0;
+let secs = 0;
+let timer;
 
 function gameOver() {
+    clearInterval(timer);
     winMoves.innerText = moves;
-    // TODO - show time to win
+    winTime.innerText = `${mins}:${secs}`;
     quitButton.innerText = 'Main Menu';
     $('#gameWon').modal('show');
 }
@@ -69,6 +75,23 @@ function checkCards(event) {
     }
 }
 
+function startTimer() {
+    timer = setInterval(() => {
+        secs++;
+
+        if (secs > 59) {
+            minutes.innerText = ++mins;
+            secs = 0;
+        };
+
+        if (secs < 10) {
+            seconds.innerText = `0${secs}`;
+        }  else {
+            seconds.innerText = secs;
+        }
+    }, 1000);
+}
+
 function setCardListeners() {
     const playingCards = document.querySelectorAll('.flip-card');
     playingCards.forEach(function (playingCard) {
@@ -116,6 +139,7 @@ function shuffleCards(cards) {
 function startGame() {
     cards = shuffleCards(cards.concat(cards));
     displayCards(cards);
+    startTimer();
 };
 
 // Event Listeners

@@ -57,10 +57,10 @@
         <!-- Counters section -->
         <div class="counters row justify-content-center">
             <div class="col-6 col-md-3">
-                <div id="moves">MOVES: <span id="moves-counter">0</span></div>
+                <div id="moves">MOVES:  <span id="moves-counter">0</span></div>
             </div>
             <div class="col-6 col-md-3">
-                <div>TIME: <span id="time-counter">0</span></div>
+                <div>TIME:  <span id="minutes">0</span>:<span id="seconds">00</span></div>
             </div>
         </div>
 
@@ -75,8 +75,8 @@
                 <div class="col-3">
                     <button class="rules-button btn btn-info">Rules</button>
                 </div>
-                <!-- Button triggers modal -->
                 <div class="col-3">
+                    <!-- This button triggers modal -->
                     <button type="button" id="quit-button" class="btn btn-primary" data-toggle="modal" data-target="#confirmQuitGame">
                         Quit
                     </button>
@@ -84,6 +84,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- Modals, customized from https://getbootstrap.com/docs/4.6/components/modal/#static-backdrop -->
 
@@ -119,7 +120,7 @@
                 </div>
                 <div class="modal-body">
                     <p>You finished the game in <span id="win-moves"></span> moves 
-                        and it took you <span id="win-time"></span></p>.
+                        and it took you <span id="win-time"></span>.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
