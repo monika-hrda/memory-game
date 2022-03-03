@@ -128,9 +128,24 @@ h2 {
 
 /* ---------------------------------------- Modals */
 
-/* .modal-footer {
+.modal-header {
+    width: 100%;
+    border-bottom: 0;
+}
+
+.modal-header h5 {
+    text-align: center;
+    width: 100%;
+}
+
+.modal-body {
+    text-align: center;
+}
+
+.modal-footer {
+    border-top: 0;
     justify-content: center;
-} */
+}
 
 /* ---------------------------------------- Media queries */
 
