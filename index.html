@@ -8,13 +8,16 @@
     <meta name="keywords" content="game, memory, memory game, card-matching game, pairs, pexeso, animals">
     <title>Lost in the Wild | Memory Game</title>
     
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS & Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 </head>
+
 <body>
+    <!-- Header -->
     <header>
         <div id="title" class="container text-center">
             <h1>Lost in the Wild</h1>
@@ -23,68 +26,77 @@
     </header>
 
     <!-- Main Menu -->
-    <div id="menu" class="container">
-        <div class="row">
-            <div class="col-4 offset-4">
-                <button id="easy-button" class="difficulty-button btn button-warning button-active" data-value="4">Easy</button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4 offset-4">
-                <button id="medium-button" class="difficulty-button btn button-warning" data-value="6">Medium</button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4 offset-4">
-                <button id="hard-button" class="difficulty-button btn button-warning" data-value="8">Hard</button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4 offset-4">
-                <button id="play-button" class="play-button btn btn-primary">Play!</button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4 offset-4">
-                <button class="rules-button btn btn-info">Rules</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Game Board -->
-    <div id="game" class="container">
-
-        <!-- Counters section -->
-        <div class="counters row justify-content-center">
-            <div class="col-6 col-md-3">
-                <div id="moves">MOVES:  <span id="moves-counter">0</span></div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div>TIME:  <span id="minutes">0</span>:<span id="seconds">00</span></div>
-            </div>
+    <main>
+        <div id="menu" class="container">
+            <button id="easy-button" class="difficulty-button btn button-warning button-active" data-value="4">Easy</button>
+            <button id="medium-button" class="difficulty-button btn button-warning" data-value="6">Medium</button>
+            <button id="hard-button" class="difficulty-button btn button-warning" data-value="8">Hard</button>
+            <button id="play-button" class="play-button btn btn-primary">Play!</button>
+            <button id="rules-button" class="rules-button btn btn-info">Rules</button>
         </div>
 
-        <!-- Playing cards -->
-        <div id="board" class="container">
-            <!-- board will be dynamically built by JavaScript -->
-        </div>
+        <!-- Game Board -->
+        <div id="game" class="container">
 
-        <!-- Buttons section -->
-        <div id="game-buttons">
-            <div class="row justify-content-center">
-                <div class="col-3">
-                    <button class="rules-button btn btn-info">Rules</button>
+            <!-- Counters section -->
+            <div class="counters row justify-content-center">
+                <div class="col-6 col-md-3">
+                    <div id="moves">MOVES:  <span id="moves-counter">0</span></div>
                 </div>
-                <div class="col-3">
-                    <!-- This button triggers modal -->
-                    <button type="button" id="quit-button" class="btn btn-primary" data-toggle="modal" data-target="#confirmQuitGame">
-                        Quit
-                    </button>
+                <div class="col-6 col-md-3">
+                    <div>TIME:  <span id="minutes">0</span>:<span id="seconds">00</span></div>
+                </div>
+            </div>
+
+            <!-- Playing cards -->
+            <div id="board" class="container">
+                <!-- board will be dynamically built by JavaScript -->
+            </div>
+
+            <!-- Buttons section -->
+            <div id="game-buttons">
+                <div class="row justify-content-center">
+                    <div class="col-3">
+                        <button class="rules-button btn btn-info">Rules</button>
+                    </div>
+                    <div class="col-3">
+                        <!-- This button triggers modal -->
+                        <button type="button" id="quit-button" class="btn btn-primary" data-toggle="modal" data-target="#confirmQuitGame">
+                            Quit
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
+    <!-- Footer -->
+    <footer class="container-fluid footer-container">
+        <div class="container">
+            <div class="text-center">
+                <ul class="list-inline social-links">
+                    <li class="list-inline-item">
+                        <a href="https://github.com/monika-hrda" target="_blank">
+                            <i class="bi-github" role="img" aria-label="GitHub"></i>
+                            <span class="sr-only">GitHub</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.linkedin.com/in/monikahrda/" target="_blank">
+                            <i class="bi bi-linkedin pl-3" role="img" aria-label="LinkedIn"></i>
+                            <span class="sr-only">LinkedIn</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="text-center">
+                <p class="copyright">
+                    &copy; 2022 Monika Hrda
+                </p>
+            </div>
+        </div>
+    </footer>
+    
 
     <!-- Modals, customized from https://getbootstrap.com/docs/4.6/components/modal/#static-backdrop -->
 

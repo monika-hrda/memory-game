@@ -3,11 +3,16 @@
 body {
     background-color: #e3f6f5;
     font-family: 'Roboto', sans-serif;
-    /* font-size: 2vw; */
     font-weight: 400;
     margin: 0;
     padding: 0;
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
 }
 
 h1 {
@@ -87,6 +92,18 @@ h2 {
     display: none;
 }
 
+/* ---------------------------------------- Footer */
+
+.bi-github::before,
+.bi-linkedin::before {
+    font-size: 2rem;
+    color: black;
+}
+
+.copyright {
+    font-size: 2vw;
+}
+
 /* ---------------------------------------- Modals */
 
 /* .modal-footer {
@@ -104,6 +121,15 @@ h2 {
         font-size: 4vw;
     }
 
+    .bi-github::before,
+    .bi-linkedin::before {
+        font-size: 1.5rem;
+    }
+
+    .copyright {
+        font-size: 3vw;
+    }
+
     #moves {
         text-align: center;
     }
@@ -116,5 +142,14 @@ h2 {
 
     h2 {
         font-size: 3vw;
+    }
+
+    .bi-github::before,
+    .bi-linkedin::before {
+        font-size: 1.5rem;
+    }
+
+    .copyright {
+        font-size: 2vw;
     }
 }
