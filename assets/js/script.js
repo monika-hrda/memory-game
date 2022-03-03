@@ -105,10 +105,10 @@ function createCard(card, index) {
         <div class="flip-card col-3" data-index="${index}" data-id="${card.id}">
             <div class="flip-card-inner">
                 <div class="flip-card-back rounded-sm">
-                    <img class="card-image img-fluid" src="assets/images/cards/card-back.png">
+                    <img class="card-image img-fluid" src="assets/images/cards/card-back.png" alt="bunch of leaves on the back of a card">
                 </div>
                 <div class="flip-card-front rounded-sm">
-                    <img class="card-image img-fluid" src="${card.image}">
+                    <img class="card-image img-fluid" src="${card.image}" alt="${card.animal}">
                 </div>
             </div>
         </div>
