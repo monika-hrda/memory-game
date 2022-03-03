@@ -5,7 +5,7 @@ Lost in the Wild is a web-based single-player memory game. Its objective is to f
 
 The game was built as my second milestone project for Code Institute's Full Stack Software Development course. The topic for the project was chosen because the memory game (Pexeso) was one of my most favourite games growing up.
 
-You can view the live website [here]( "Lost in the Wild | Memory Game"). 
+You can view the live website [here](https://monika-hrda.github.io/memory-game/ "Lost in the Wild | Memory Game"). 
 ***
 ## User Experience (UX)
 
@@ -59,13 +59,24 @@ As a user, I want to be able to:
 
 ### Languages Used
 
+* JavaScript
+* HTML5
+* CSS3
+
 ### Frameworks, Libraries & Programs Used
 
+* [Bootstrap v4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - to assist with responsiveness and styling of the website
+* [Bootstrap Icons](https://icons.getbootstrap.com/) - to display icons for social media in the footer
 * [Google Fonts](https://fonts.google.com/)
 * [https://svgtopng.com/](https://svgtopng.com/) - to convert SVG files to PNG
 * [https://www.iloveimg.com/](https://www.iloveimg.com/) - to resize multiple PNG files at once
 * [https://onlinepngtools.com/](https://onlinepngtools.com/) - to fit PNG files in a rectangle
 * [https://imagecompressor.com/](https://imagecompressor.com/) - to compress image files
+* Git
+* Github
+* Gitpod
+* GitHub Pages
+* Google Chrome Developer Tools
 
 ***
 ## Testing
@@ -84,16 +95,38 @@ During the development process, the game was continuously tested and bugs and is
 ***
 ## Deployment
 
+This project can be forked and subsequently deployed to GitHub Pages following these steps: 
+
+1. Log in to GitHub and locate this project (you are most likely here). 
+2. Locate the Fork button at the top right corner of the page and click on it. 
+3. In your copy of the project (repository) click on Settings button above the repository. 
+4. Locate link to 'Pages' in the left hand side menu and click on it.
+5. Click the 'None' button and select the 'main' branch (it could also be called 'master'). 
+6. Click on the 'Save' button. 
+7. The page will refresh and the link to your newly published site will be revealed. (It usually takes a couple of minutes for the site to be built, so please be patient.)
+
 ***
 ## Credits
 
 ### Code
 
-* Creating a flip card (HTML & CSS part, customized) - https://www.w3schools.com/howto/howto_css_flip_card.asp
+* inspiration and knowledge from:
+  * content and walk-through projects from Code Institute's JS Essentials and Interactive Frontend Development modules
+  * [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+  * official [Bootstrap](https://getbootstrap.com/docs/4.6/) website
+  * [W3Schools](https://www.w3schools.com/) website and its examples
+* creating a flip card (HTML & CSS part, customized) - https://www.w3schools.com/howto/howto_css_flip_card.asp
 * Bootstrap modal - https://getbootstrap.com/docs/4.6/components/modal/#static-backdrop
+
 
 ### Content
 
+Content written by Monika Hrda.
+
 ### Media
 
+* Images of cartoon animals for playing cards - [Vecteezy](https://www.vecteezy.com/vector-art/5277505-set-of-animal-illustrations-in-a-cute-vector-graphic)
+
 ### Acknowledgements
+
+Fellow Slackers from Code Institute's Slack channel deserve a big thank you for their support, advice, encouragement, and friendship. 
