@@ -77,6 +77,8 @@ During the development process, the game was continuously tested and bugs and is
 * While working on the cards flipping mechanism, there were issues with getting cards to be responsive without getting their images squished, the rows disappering completely, images and cards overlapping, the height not being responsive, etc. A lot of it was solved by discovering the CSS properties 'aspect-ratio' and 'object-fit' (https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio, https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)
 * When using white colour as a background colour for the animal images, there seemed to be a colour contrast issue. Some animals were switched around to accommodate this. See example below, with the last board being one with no contrast issues:
 ![examples of contrast issues with cards and subsequent cards choice](docs/screenshots/cards-contrast-issue-examples.jpg)
+* If the time it took the player to win had seconds < 10, the winning time was not displaying correctly. JS bug was fixed with adding some conditional logic.
+![bug showing number of seconds incorrectly](docs/screenshots/winning-time-bug.jpg)
 
 
 ***

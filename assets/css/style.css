@@ -145,6 +145,7 @@ h2 {
 .modal-footer {
     border-top: 0;
     justify-content: center;
+    padding-bottom: 1.25rem;
 }
 
 /* ---------------------------------------- Media queries */

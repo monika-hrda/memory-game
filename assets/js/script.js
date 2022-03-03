@@ -25,7 +25,11 @@ let timer;
 function gameOver() {
     clearInterval(timer);
     winMoves.innerText = moves;
-    winTime.innerText = `${mins}:${secs}`;
+    if (secs < 10) {
+        winTime.innerText = `${mins}:0${secs} min`;
+    }  else {
+        winTime.innerText = `${mins}:${secs} min`;
+    }
     quitButton.innerText = 'Main Menu';
     $('#gameWon').modal('show');
 }
