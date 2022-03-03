@@ -11,7 +11,7 @@ const seconds = document.querySelector('#seconds');
 const winMoves = document.querySelector('#win-moves');
 const winTime = document.querySelector('#win-time');
 
-let numOfCards = 6;
+let numOfCards = 4;
 let cards = [];
 
 let isPaused = false;
