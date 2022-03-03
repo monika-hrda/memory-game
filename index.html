@@ -32,7 +32,10 @@
             <button id="medium-button" class="difficulty-button btn button-warning" data-value="6">Medium</button>
             <button id="hard-button" class="difficulty-button btn button-warning" data-value="8">Hard</button>
             <button id="play-button" class="play-button btn btn-primary">Play!</button>
-            <button id="rules-button-main" class="rules-button btn btn-info">Rules</button>
+            <!-- This button triggers modal -->
+            <button type="button" id="rules-button-main" class="rules-button btn btn-info" data-toggle="modal" data-target="#rulesModal">
+                Rules
+            </button>
         </div>
 
         <!-- Game Board -->
@@ -53,14 +56,15 @@
                 <!-- board will be dynamically built by JavaScript -->
             </div>
 
-            <!-- Buttons section -->
+            <!-- Buttons section, they both trigger modals -->
             <div id="game-buttons">
                 <div class="row justify-content-center">
                     <div class="col-3">
-                        <button class="rules-button btn btn-info">Rules</button>
+                        <button type="button" id="rules-button" class="rules-button btn btn-info" data-toggle="modal" data-target="#rulesModal">
+                            Rules
+                        </button>
                     </div>
                     <div class="col-3">
-                        <!-- This button triggers modal -->
                         <button type="button" id="quit-button" class="btn btn-primary" data-toggle="modal" data-target="#confirmQuitGame">
                             Quit
                         </button>
@@ -141,6 +145,40 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal to show rules -->
+    <div class="modal fade" id="rulesModal" tabindex="-1" aria-labelledby="rulesModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Game Rules</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Choose game difficulty & hit Play button.
+                    </p>
+                    <p>
+                        Click on a card to reveal the animal underneath.
+                    </p>
+                    <p>
+                        Can you find its matching pair? Click on a second card where you suspect it could be hiding.
+                    </p>
+                    <p>
+                        Find all the animal pairs to win the game!
+                    </p>
+                    <p>
+                        Can you do it all in a minimal number of moves and time? Try again!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+      </div>
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
