@@ -30,7 +30,29 @@ h2 {
     font-weight: 600;
 }
 
+/* ---------------------------------------- Main Menu */
+
+#menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 200px;
+    background-color: #a8d4c3;
+    padding: 35px 0;
+    border-radius: 10px;
+    border: 3px dotted #000;
+}
+
 /* ---------------------------------------- Buttons */
+
+#easy-button, #medium-button, #hard-button, #play-button, #rules-button-main {
+    text-align: center;
+    min-width: 120px;
+    display: block;
+    padding: 10px;
+    margin: 10px auto;
+}
 
 .button-warning {
     background-color: yellow;
@@ -101,7 +123,7 @@ h2 {
 }
 
 .copyright {
-    font-size: 2vw;
+    font-size: 16px;
 }
 
 /* ---------------------------------------- Modals */
@@ -126,10 +148,6 @@ h2 {
         font-size: 1.5rem;
     }
 
-    .copyright {
-        font-size: 3vw;
-    }
-
     #moves {
         text-align: center;
     }
@@ -147,9 +165,5 @@ h2 {
     .bi-github::before,
     .bi-linkedin::before {
         font-size: 1.5rem;
-    }
-
-    .copyright {
-        font-size: 2vw;
     }
 }
