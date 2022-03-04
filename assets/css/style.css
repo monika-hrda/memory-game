@@ -197,6 +197,12 @@ footer {
 .modal-header {
     width: 100%;
     border-bottom: 0;
+    font-family: 'Lobster';
+    text-align: center;
+}
+
+.modal-title {
+    font-size: 1.4rem;
 }
 
 .modal-header h5 {
@@ -206,6 +212,16 @@ footer {
 
 .modal-body {
     text-align: center;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.modal-content {
+    background: #e3f6f5;
+    /* color: white !important;
+    background-image: url(../images/backgrounds/wood.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/backgrounds/wood.png');
+    background-size: contain; */
 }
 
 .modal-footer {

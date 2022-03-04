@@ -114,9 +114,10 @@
 
     <!-- Modal to confirm quit game -->
     <div class="modal fade" id="confirmQuitGame" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="confirmQuitGameLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
+                    <h5 class="modal-title">Quit?</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -125,8 +126,8 @@
                     <p>Are you sure you want to quit the game?</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Take me back to my game!</button>
-                    <button type="button" class="quit-buttons btn btn-primary">Quit</button>
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Take me back to my game!</button>
+                    <button type="button" class="quit-buttons btn btn-danger">Quit</button>
                 </div>
             </div>
         </div>
@@ -134,7 +135,7 @@
 
     <!-- Modal to announce winning the game -->
     <div class="modal fade" id="gameWon" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="gameWonLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Congratulations, you won!</h5>
@@ -143,8 +144,10 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>You finished the game in <span id="win-moves"></span> moves 
-                        and it took you <span id="win-time"></span>.</p>
+                    <p>
+                        You finished the game in <span id="win-moves"></span> moves 
+                        and it took you <span id="win-time"></span>.
+                    </p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -156,7 +159,7 @@
 
     <!-- Modal to show rules -->
     <div class="modal fade" id="rulesModal" tabindex="-1" aria-labelledby="rulesModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="rulesModalLabel">Game Rules</h5>
@@ -182,11 +185,11 @@
                     </p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
-      </div>
+    </div>
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -197,4 +200,5 @@
     <script src="assets/js/script.js"></script>
     <noscript>Your browser does not support JavaScript!</noscript>
 </body>
+
 </html>
