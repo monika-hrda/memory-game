@@ -27,7 +27,7 @@ As a user, I want to be able to:
 
 * #### Colour Scheme
 
-The colour scheme has been designed to give a unified front with muted pastel colours. Colours on the buttons calling to action stand out and add a playful tone to the site. 
+  The colour scheme has been designed to give a unified front with muted pastel colours. Colours on the buttons calling to action stand out and add a playful tone to the site. 
 
 * #### Typography
 
@@ -89,6 +89,7 @@ The colour scheme has been designed to give a unified front with muted pastel co
 * **Favicon** allows users to locate the game tab easily. 
 
 * The game is fully **responsive** on all used screen sizes.
+
 
 ### Features Left to Implement in the Future
 
