@@ -90,6 +90,7 @@ During the development process, the game was continuously tested and bugs and is
 ![examples of contrast issues with cards and subsequent cards choice](docs/screenshots/cards-contrast-issue-examples.jpg)
 * If the time it took the player to win had seconds < 10, the winning time was not displaying correctly. JS bug was fixed with adding some conditional logic.
 ![bug showing number of seconds incorrectly](docs/screenshots/winning-time-bug.jpg)
+* Reloading the page as a way to quit the game stopped working when the site was deployed to GitHub Pages. This is due to GitHub not serving from the root directory. It was fixed by appending the GitHub endpoint to the redirect url string, using conditional logic, so that I could work in Gitpod and GitHub at the same time.
 
 
 ***

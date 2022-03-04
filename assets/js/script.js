@@ -170,6 +170,6 @@ playButton.addEventListener('click', function () {
 
 quitButtons.forEach(function(button) {
     button.addEventListener('click', function() {
-        window.location.href = '/';
+        window.location.href = window.location.href.includes('github') ? '/memory-game/' : '/';
     });
 });
