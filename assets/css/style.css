@@ -183,14 +183,14 @@ footer {
     font-size: 16px;
 }
 
-/* Decide on whether to have text in footer more visible or hidden  */
-/* footer p, .bi-github::before, .bi-linkedin::before {
+/* To allow text and social media icons in the footer to be more visible */
+footer p, .bi-github::before, .bi-linkedin::before {
     width: 100%;
     display: inline;
-    background-color: white;
-    border-radius: 7px;
-    padding: 5px 10px;
-} */
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    padding: 2px 4px;
+}
 
 /* ---------------------------------------- Modals */
 
@@ -218,10 +218,6 @@ footer {
 
 .modal-content {
     background: #e3f6f5;
-    /* color: white !important;
-    background-image: url(../images/backgrounds/wood.png);
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/backgrounds/wood.png');
-    background-size: contain; */
 }
 
 .modal-footer {

@@ -41,7 +41,7 @@ function checkCardsForMatch(chosenCards) {
         setTimeout(() => {
             chosenCards.forEach((card) => {
                 const inner = card.querySelector('.flip-card-inner');
-                inner.classList.remove('flipped')});
+                inner.classList.remove('flipped');});
         }, 1500);
     } else {
         numOfMatches++;
@@ -76,7 +76,7 @@ function checkCards(event) {
             setTimeout(() => {
                 isPaused = false;
                 chosenCards = [];
-            }, 1500)
+            }, 1500);
     }
 }
 
@@ -87,7 +87,7 @@ function startTimer() {
         if (secs > 59) {
             minutes.innerText = ++mins;
             secs = 0;
-        };
+        }
 
         if (secs < 10) {
             seconds.innerText = `0${secs}`;
@@ -117,7 +117,7 @@ function createCard(card, index) {
                 </div>
             </div>
         </div>
-    `
+    `;
 }
 
 function displayCards(cards) {
@@ -132,7 +132,7 @@ function displayCards(cards) {
 
         board.innerHTML += `<div class="row">${cardsHTML}</div>`;
         cardsHTML = '';
-    };
+    }
 
     setCardListeners();
 }
@@ -166,7 +166,7 @@ function startGame() {
     displayCards(cards);
     startTimer();
     fadeBackground();
-};
+}
 
 // Event Listeners
 
@@ -180,7 +180,7 @@ difficultyButtons.forEach(function (button) {
         });
         btn.classList.add('button-active');
         numOfCards = Number(btn.dataset.value);
-    })
+    });
 });
 
 playButton.addEventListener('click', function () {

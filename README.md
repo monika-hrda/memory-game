@@ -5,6 +5,8 @@ Lost in the Wild is a web-based single-player memory game. Its objective is to f
 
 The game was built as my second milestone project for Code Institute's Full Stack Software Development course. The topic for the project was chosen because the memory game (Pexeso) was one of my most favourite games growing up.
 
+![Lost in the Wild](docs/screenshots/am-i-responsive.jpg)
+
 You can view the live website [here](https://monika-hrda.github.io/memory-game/ "Lost in the Wild | Memory Game"). 
 ***
 ## User Experience (UX)
@@ -131,17 +133,64 @@ The colour scheme has been designed to give a unified front with muted pastel co
 ***
 ## Testing
 
-During the development process, the game was continuously tested and bugs and issues that were found were resolved. A few examples would be:
+### Validator Testing
+
+The W3C Markup Validator, W3C CSS Validator and JSHint were used to validate the project to ensure there were no syntax errors within the site.
+
+* [W3C Markup Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmonika-hrda.github.io%2Fmemory-game%2F) - no errors were found
+
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmonika-hrda.github.io%2Fmemory-game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) - no errors were found
+
+* [JSHint](https://jshint.com/) results can be seen below. AnimalCards array is being marked because the array is located in 'cards.js' file.
+![JSHint results](docs/screenshots/JSHint.jpg)
+
+
+### User Stories Testing 
+
+As a user, I want to be able to: 
+
+* easily understand what the purpose of the website is.
+  * The website clearly announces it is a Memory Game at the top of the screen. The visuals are playful, the area is "covered" in leaves, hinting at animals needing to be found. 
+
+* navigate the website easily and intuitively.
+  * The navigation buttons are large and clearly labeled. The Play button on the main page "jumps" out at the user and invites them to play. There are various modals popping out, each guiding the user to the next action to be taken.
+
+* find instructions on how to play the game.
+  * There are two Rules buttons located both on the main screen and on the screen with the game board present that the user can use at any given moment.
+
+* choose various difficulty levels of the game.
+  * There are three buttons on the main screen which give the user option to choose game difficulty - Easy, Medium, or Hard.
+
+* keep track of my progress in the game.
+  * Time counter counts minutes and seconds since the board was laid out. Moves counter informs the user about how many turns has he taken so far / how many pairs of cards has he turned over so far.
+
+* view the website clearly on multiple devices, including my mobile device, so that I can achieve my other goals on the go.
+  * The website was tested on various devices and no issues were found. 
+
+* find the website's creator on Github, so that I can learn more about and/or follow them to keep up with their updates.
+  * There are social media links in the footer which redirect the user to the relevant social media pages - GitHub and Linked.
+
+### Continuous Testing
+
+During the development process, the game was continuously tested and **bugs and issues** that were found were resolved. A few examples would be:
 
 * Using class 'card' on cards caused issue with displaying them because of Bootstrap using the class for their own card component. The custom class was renamed as soon as I realised that.
-* It took some JavaScript magic to create Bootstrap rows dynamically. 
+
+* It took some JavaScript magic to create Bootstrap rows dynamically.
+
 * While working on the cards flipping mechanism, there were issues with getting cards to be responsive without getting their images squished, the rows disappering completely, images and cards overlapping, the height not being responsive, etc. A lot of it was solved by discovering the CSS properties 'aspect-ratio' and 'object-fit' (https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio, https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)
+
 * When using white colour as a background colour for the animal images, there seemed to be a colour contrast issue. Some animals were switched around to accommodate this. See example below, with the last board being one with no contrast issues:
 ![examples of contrast issues with cards and subsequent cards choice](docs/screenshots/cards-contrast-issue-examples.jpg)
+
 * If the time it took the player to win had seconds < 10, the winning time was not displaying correctly. JS bug was fixed with adding some conditional logic.
 ![bug showing number of seconds incorrectly](docs/screenshots/winning-time-bug.jpg)
+
 * Reloading the page as a way to quit the game stopped working when the site was deployed to GitHub Pages. This is due to GitHub not serving from the root directory. It was fixed by appending the GitHub endpoint to the redirect url string, using conditional logic, so that I could work in Gitpod and GitHub at the same time.
 
+### Known Bugs and Issues
+
+There are currently no known bugs or issues present.
 
 ***
 ## Deployment
