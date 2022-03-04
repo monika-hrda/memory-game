@@ -25,6 +25,8 @@ As a user, I want to be able to:
 
 * #### Colour Scheme
 
+The colour scheme has been designed to give a unified front with muted pastel colours. Colours on the buttons calling to action stand out and add a playful tone to the site. 
+
 * #### Typography
 
   [Lobster font](https://fonts.google.com/specimen/Lobster) has been used for the main heading as it is more untraditional and conveys playfulness. 
@@ -58,7 +60,47 @@ As a user, I want to be able to:
 
 ### Existing Features
 
+* The starting screen consists of **main menu** with five buttons. 
+  * The first three buttons give the user option to **choose game difficulty** - Easy, Medium, or Hard. The difficulty levels represent different number of cards on the board. If the user does not make a choice, the Easy option is pre-selected as a default option. 
+  * The **Rules** button opens a modal which informs the user on how to play the game. The modal can be dismissed by clicking on the Close button, the 'x' button in the corner, or by clicking anywhere outside of the modal. 
+  * The **Play** button starts a game based on the selected difficulty level.
+
+* The Game screen fades into view as the leaves on the sides of the screen fade out. 
+  * At the top of the page, right above the game board, are 4 different counters and game controls.
+  * **Time counter** counts minutes and seconds since the board was laid out. 
+  * **Moves** counter informs the user about how many turns has he taken so far / how many pairs of cards has he turned.
+  * There is the **Rules** button again, may the user want to revisit the instructions. 
+  * The **Quit** button is made very visible and gives the user an option to leave the game and return to the main menu at any point in the game. 
+  * It opens the **Quit modal** which asks user to choose between returning to the game or leaving the game altogether. Dismissing the button by clicking outside of it is disabled. 
+  * The **Game Board** consists of either 8, 12, or 16 cards representing various difficulty levels. The cards are shuffled and the animals hiding on the front face of the cards are revealed by clicking on the card. 
+  It is only possible to click on 2 cards at the most while taking a turn, and there is a timeout set to give user a chance to memorize location of the animal on those particular cards. 
+  If a match is made, the cards remain turned face up. 
+
+* The game ends when all pairs have been found and a **Win Modal** pops up to congratulate the user on winning. It also lets them know how long it took them to win the game, and how many turns did they make in the process. 
+  * User has the option to either dismiss the modal by clicking on the **Close** button, or click on another button to return to **Main Menu**. 
+  * At this point the button above the board changes from being a **Quit** button to **Main Menu** button.
+
+* The Rules and Quit game modals are triggered by allocated buttons. The functionality to open modals was implemented by Bootstrap in their cases, however JavaScript was used and event listener added to the **Quit button** to have player confirm their choice. The Win modal is triggered by a call from JavaScript.
+
+* Social media links in the **footer** redirect the user to the relevant social media pages; these open in a new tab.
+
+* **Favicon** allows users to locate the game tab easily. 
+
+* The game is fully **responsive** on all used screen sizes.
+
 ### Features Left to Implement in the Future
+
+* Animations on the animal cards. Animals could wink at the player when their match has been found. 
+
+* Ability for the user to submit their name, and being addressed by it. 
+
+* Leaderboard allowing users to compare their score to either their personal best score or to other players' scores. 
+
+* Playing against the computer.
+
+* The game could remember the user's name, and preffered difficulty level for their next visit (Local Storage API). 
+
+* 404 page
 
 ***
 ## Technologies Used
