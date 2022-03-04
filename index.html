@@ -9,10 +9,10 @@
     <title>Lost in the Wild | Memory Game</title>
     
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
 
     <!-- Bootstrap CSS & Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
@@ -23,6 +23,8 @@
 </head>
 
 <body>
+    <div id="background-image"></div>
+
     <!-- Header -->
     <header>
         <div id="title" class="container text-center">
@@ -33,13 +35,15 @@
 
     <!-- Main Menu -->
     <main>
-        <div id="menu" class="container">
-            <button id="easy-button" class="difficulty-button btn button-warning button-active" data-value="4">Easy</button>
-            <button id="medium-button" class="difficulty-button btn button-warning" data-value="6">Medium</button>
-            <button id="hard-button" class="difficulty-button btn button-warning" data-value="8">Hard</button>
-            <button id="play-button" class="play-button btn btn-primary">Play!</button>
+        <div id="menu">
+            <div>
+                <button id="easy-button" class="difficulty-button btn button-active" data-value="4">Easy</button>
+                <button id="medium-button" class="difficulty-button btn" data-value="6">Medium</button>
+                <button id="hard-button" class="difficulty-button btn" data-value="8">Hard</button>
+            </div>
+            <button id="play-button" class="play-button btn btn-danger">Play!</button>
             <!-- This button triggers modal -->
-            <button type="button" id="rules-button-main" class="rules-button btn btn-info" data-toggle="modal" data-target="#rulesModal">
+            <button type="button" id="rules-button-main" class="rules-button btn btn-primary" data-toggle="modal" data-target="#rulesModal">
                 Rules
             </button>
         </div>

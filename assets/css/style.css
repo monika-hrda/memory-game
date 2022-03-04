@@ -13,21 +13,45 @@ body {
 
 main {
     flex-grow: 1;
+    position: relative;
+    margin-top: 25px;
+    margin-bottom: 100px
 }
 
-h1 {
+header h1 {
     font-family: 'Lobster', cursive;
-    font-size: 5vw;
+    font-size: 4.5vmax;
 }
 
-h2 {
+header h2 {
     font-family: 'Roboto', sans-serif;
-    font-size: 2vw;
+    font-size: 24px;
     font-weight: 600;
+    font-style: oblique;
 }
 
-.counters {
-    font-weight: 600;
+#background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-image: url(../images/backgrounds/tropical-light.png);
+    background-size: cover;
+    background-position: center;
+}
+
+header,
+footer {
+    padding: 30px 0;
+    background-repeat: repeat-x;
+}
+
+header {
+    background-image: url(../images/backgrounds/foliage-down.png);
+    background-position-y: bottom;
+    min-height: 15vh;
 }
 
 /* ---------------------------------------- Main Menu */
@@ -37,29 +61,43 @@ h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1.25);
-    width: 200px;
-    background-color: #a8d4c3;
-    padding: 35px 0;
-    border-radius: 10px;
-    border: 3px dotted #000;
+    min-width: 220px;
+    max-width: 400px;
+    border-radius: 15px;
+    padding: 40px 0;
+    border-style: none;
+    text-align: center;
 }
 
 /* ---------------------------------------- Buttons */
 
-#easy-button, #medium-button, #hard-button, #play-button, #rules-button-main {
+#easy-button, 
+#medium-button, 
+#hard-button, 
+#play-button, 
+#rules-button-main {
     text-align: center;
+    font-weight: bold;
     min-width: 120px;
-    display: block;
+    display: unset;
     padding: 10px;
     margin: 10px auto;
 }
 
-.button-warning {
-    background-color: yellow;
+.difficulty-button {
+    background-color: #48b2ae;
+    color: white;
 }
 
 .button-active {
-    background-color: lightyellow;
+    background-color: #a8d4c3;
+    color: black;
+}
+
+/* ---------------------------------------- Counters */
+
+.counters {
+    font-weight: 600;
 }
 
 /* ---------------------------------------- Playing cards */
@@ -116,15 +154,30 @@ h2 {
 
 /* ---------------------------------------- Footer */
 
+footer {
+    background-image: url(../images/backgrounds/foliage-up.png);
+    font-weight: 700;
+}
+
 .bi-github::before,
 .bi-linkedin::before {
     font-size: 2rem;
-    color: black;
+    transition: .3s;
+    color: #444;
 }
 
 .copyright {
     font-size: 16px;
 }
+
+/* Decide on whether to have text in footer more visible or hidden  */
+/* footer p, .bi-github::before, .bi-linkedin::before {
+    width: 100%;
+    display: inline;
+    background-color: white;
+    border-radius: 7px;
+    padding: 5px 10px;
+} */
 
 /* ---------------------------------------- Modals */
 
@@ -150,36 +203,53 @@ h2 {
 
 /* ---------------------------------------- Media queries */
 
-@media only screen and (max-width: 768px) {
-    h1 {
-        font-size: 10vw;
+@media only screen and (max-width: 750px) {
+
+    main {
+        margin-bottom: 25px;
+        padding-right: 3%;
+        padding-left: 3%;
     }
 
-    h2 {
-        font-size: 4vw;
+    #menu {
+        transform: translate(-50%, -50%) scale(1);
     }
 
-    .bi-github::before,
+    header h1 {
+        font-size: 5.5vmax;
+    }
+
+    header h2 {
+        font-size: 20px;
+    }
+
+    /* .bi-github::before,
     .bi-linkedin::before {
         font-size: 1.5rem;
-    }
+    } */
 
     #moves {
         text-align: center;
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 992px) {
-    h1 {
-        font-size: 7vw;
+@media only screen and (min-width: 500px) and (max-width: 1000px) {
+
+    #menu {
+        position: relative;
+        top: 0%;
+        left: 0%;
+        transform: translate(0%, 0%) scale(1);
+        margin: auto;
+        padding: 0;
     }
 
-    h2 {
-        font-size: 3vw;
+    #background-image {
+        display: none;
     }
 
-    .bi-github::before,
+    /* .bi-github::before,
     .bi-linkedin::before {
         font-size: 1.5rem;
-    }
+    } */
 }

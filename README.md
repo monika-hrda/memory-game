@@ -33,7 +33,7 @@ As a user, I want to be able to:
 
 * #### Imagery
 
-  I decided not to use photographs, but go for images of cartoon animals and vector images of foliage. I did this to evoke a fun and consistent style across the website. 
+  I decided not to use photographs, but go for images of cartoon animals and vector images of foliage instead. I did this to evoke a fun and consistent style across the website. 
 
   The images were originally uploaded as SVG files, with the intention to animate the animals. Upon running into some complications related to not being able to access inner classes of the individual parts of the SVG files, I decided to leave this feature out for now. (I have however gained a deeper understanding of SVGs in the process and plan to look at embedding the SVG files as an object instead of an img tag in order to implement this feature.)
 
@@ -78,6 +78,7 @@ As a user, I want to be able to:
 * [https://www.iloveimg.com/](https://www.iloveimg.com/) - to resize multiple PNG files at once
 * [https://onlinepngtools.com/](https://onlinepngtools.com/) - to fit PNG files in a rectangle
 * [https://imagecompressor.com/](https://imagecompressor.com/) - to compress image files
+* [https://favicon.io/](https://favicon.io/favicon-converter/) - to generate favicon from one of the animal images
 * Git
 * Github
 * Gitpod
