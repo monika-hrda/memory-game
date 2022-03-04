@@ -33,6 +33,12 @@ As a user, I want to be able to:
 
 * #### Imagery
 
+  I decided not to use photographs, but go for images of cartoon animals and vector images of foliage. I did this to evoke a fun and consistent style across the website. 
+
+  The images were originally uploaded as SVG files, with the intention to animate the animals. Upon running into some complications related to not being able to access inner classes of the individual parts of the SVG files, I decided to leave this feature out for now. (I have however gained a deeper understanding of SVGs in the process and plan to look at embedding the SVG files as an object instead of an img tag in order to implement this feature.)
+
+  The images of foliage were edited in Photoshop to use on the background to evoke a feeling of the animals being lost / hiding in a jungle.
+
 ### Wireframes
 
 * Main menu
@@ -77,6 +83,7 @@ As a user, I want to be able to:
 * Gitpod
 * GitHub Pages
 * Google Chrome Developer Tools
+* Photoshop - to edit images and create a page background
 
 ***
 ## Testing
@@ -116,6 +123,7 @@ This project can be forked and subsequently deployed to GitHub Pages following t
   * [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
   * official [Bootstrap](https://getbootstrap.com/docs/4.6/) website
   * [W3Schools](https://www.w3schools.com/) website and its examples
+  * walkthrough on creating a memory game by [Code with Ania Kubow](https://www.youtube.com/watch?v=tjyDOHzKN0w&ab_channel=CodewithAniaKub%C3%B3w)
 * creating a flip card (HTML & CSS part, customized) - https://www.w3schools.com/howto/howto_css_flip_card.asp
 * Bootstrap modal - https://getbootstrap.com/docs/4.6/components/modal/#static-backdrop
 
@@ -127,6 +135,8 @@ Content written by Monika Hrda.
 ### Media
 
 * Images of cartoon animals for playing cards - [Vecteezy](https://www.vecteezy.com/vector-art/5277505-set-of-animal-illustrations-in-a-cute-vector-graphic)
+* Image used for the back of cards as well as the background - [Vecteezy](https://www.vecteezy.com/vector-art/1892423-tropical-branches-with-leaves-pastel-color-on-white-background)
+* Image used as background (tone & colours edited by me in Photoshop) - [Vecteezy](https://www.vecteezy.com/vector-art/829994-print-tropical-leaves-background)
 
 ### Acknowledgements
 
