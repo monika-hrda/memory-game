@@ -69,7 +69,7 @@ header {
     text-align: center;
 }
 
-/* ---------------------------------------- Buttons */
+/* ---------------------------------------- Main menu buttons */
 
 #easy-button, 
 #medium-button, 
@@ -94,10 +94,23 @@ header {
     color: black;
 }
 
-/* ---------------------------------------- Counters */
+/* ---------------------------------------- Game buttons section */
 
-.counters {
-    font-weight: 600;
+#game-buttons {
+    text-align: center;
+    margin: 30px auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.info-divs {
+    display: inline-block;
+}
+
+.game-info {
+    display: inline-block;
+    margin: 5px;
+    text-shadow: 0px 1px rgba(0,0,0,0.5);
 }
 
 /* ---------------------------------------- Playing cards */
@@ -223,13 +236,26 @@ footer {
         font-size: 20px;
     }
 
-    /* .bi-github::before,
+    .bi-github::before,
     .bi-linkedin::before {
         font-size: 1.5rem;
-    } */
+    }
 
-    #moves {
-        text-align: center;
+    #game-buttons {
+        flex-direction: column;
+        justify-content: unset;
+    }
+
+    #counters-section {
+        order: 2;
+    }
+
+    #controllers-section {
+        order: 1;
+    }
+
+    #board {
+        margin-bottom: 50px;
     }
 }
 
@@ -244,12 +270,8 @@ footer {
         padding: 0;
     }
 
-    #background-image {
-        display: none;
-    }
-
-    /* .bi-github::before,
+    .bi-github::before,
     .bi-linkedin::before {
         font-size: 1.5rem;
-    } */
+    }
 }

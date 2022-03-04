@@ -51,36 +51,34 @@
         <!-- Game Board -->
         <div id="game" class="container">
 
-            <!-- Counters section -->
-            <div class="counters row justify-content-center">
-                <div class="col-6 col-md-3">
-                    <div id="moves">MOVES:  <span id="moves-counter">0</span></div>
+            <div id="game-buttons">
+                <!-- Counters section -->
+                <div id="counters-section" class="info-divs">
+                    <button class="game-info btn btn-info" disabled>
+                        Time: <span id="minutes">0</span>:<span id="seconds">00</span>
+                    </button>
+                    <button class="game-info btn btn-info" disabled>
+                        Moves: <span id="moves-counter">0</span>
+                    </button>
                 </div>
-                <div class="col-6 col-md-3">
-                    <div>TIME:  <span id="minutes">0</span>:<span id="seconds">00</span></div>
+                <!-- Buttons triggering modals -->
+                <div id="controllers-section" class="info-divs">
+                    <button type="button" id="rules-button" class="game-info rules-button btn btn-primary"
+                        data-toggle="modal" data-target="#rulesModal">
+                        Rules
+                    </button>
+                    <button type="button" id="quit-button" class="game-info btn btn-danger" data-toggle="modal"
+                        data-target="#confirmQuitGame">
+                        Quit
+                    </button>
                 </div>
             </div>
-
+            
             <!-- Playing cards -->
             <div id="board" class="container">
                 <!-- board will be dynamically built by JavaScript -->
             </div>
 
-            <!-- Buttons section, they both trigger modals -->
-            <div id="game-buttons">
-                <div class="row justify-content-center">
-                    <div class="col-3">
-                        <button type="button" id="rules-button" class="rules-button btn btn-info" data-toggle="modal" data-target="#rulesModal">
-                            Rules
-                        </button>
-                    </div>
-                    <div class="col-3">
-                        <button type="button" id="quit-button" class="btn btn-primary" data-toggle="modal" data-target="#confirmQuitGame">
-                            Quit
-                        </button>
-                    </div>
-                </div>
-            </div>
         </div>
     </main>
 

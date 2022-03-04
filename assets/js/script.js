@@ -10,6 +10,7 @@ const minutes = document.querySelector('#minutes');
 const seconds = document.querySelector('#seconds');
 const winMoves = document.querySelector('#win-moves');
 const winTime = document.querySelector('#win-time');
+const background = document.querySelector('#background-image');
 
 let numOfCards = 4;
 let cards = [];
@@ -140,10 +141,31 @@ function shuffleCards(cards) {
     return cards.sort(() => Math.random()-0.5);
 }
 
+function fadeBackground() {
+    background.style.opacity = 1.0;
+    board.style.opacity = 0.0;
+    
+    let displayValue = 0.0;
+    let fadeValue = 1.0;
+
+    const fadeInterval = setInterval(function() {
+        if (background.style.opacity <= 0) {
+            background.style.display = 'none';
+            clearInterval(fadeInterval);
+        } else {
+            fadeValue -= 0.010; 
+            displayValue += 0.010; 
+            background.style.opacity = fadeValue;
+            board.style.opacity = displayValue;
+        }
+    }, 10);
+}
+
 function startGame() {
     cards = shuffleCards(cards.concat(cards));
     displayCards(cards);
     startTimer();
+    fadeBackground();
 };
 
 // Event Listeners
